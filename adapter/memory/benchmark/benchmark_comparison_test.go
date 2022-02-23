@@ -5,8 +5,8 @@ import (
 	"testing"
 	"time"
 
-	cache "github.com/SporkHubr/echo-http-cache"
-	"github.com/SporkHubr/echo-http-cache/adapter/memory"
+	cache "github.com/ExecutionLab/echo-http-cache"
+	"github.com/ExecutionLab/echo-http-cache/adapter/memory"
 	"github.com/allegro/bigcache"
 )
 
