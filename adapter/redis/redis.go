@@ -28,7 +28,7 @@ import (
 	"context"
 	"time"
 
-	cache "github.com/SporkHubr/echo-http-cache"
+	cache "github.com/ExecutionLab/echo-http-cache"
 	redisCache "github.com/go-redis/cache/v8"
 	"github.com/go-redis/redis/v8"
 )
@@ -43,6 +43,7 @@ type RingOptions redis.RingOptions
 
 // Get implements the cache Adapter interface Get method.
 func (a *Adapter) Get(key uint64) ([]byte, bool) {
+
 	var c []byte
 	if err := a.store.Get(context.Background(), cache.KeyAsString(key), &c); err == nil {
 		return c, true
